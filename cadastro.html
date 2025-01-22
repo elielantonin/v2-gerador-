@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Produtos</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="cadastro.js" defer></script>
+</head>
+<body>
+    <h1>Cadastro de Produtos</h1>
+    <form id="formCadastro">
+        <label for="numeroProduto">Número do Produto:</label>
+        <select id="numeroProduto">
+            <script>
+                for (let i = 1; i <= 50; i++) {
+                    document.write(`<option value="produto${i}">Produto ${i}</option>`);
+                }
+            </script>
+        </select>
+
+        <label for="nomeProduto">Nome do Produto:</label>
+        <input type="text" id="nomeProduto" required>
+
+        <label for="precoProduto">Preço:</label>
+        <input type="text" id="precoProduto" required>
+
+        <label for="imagemProduto">Imagem (Upload):</label>
+        <input type="file" id="imagemProduto" accept="image/*" required>
+
+        <button type="submit">Cadastrar Produto</button>
+    </form>
+
+    <h2>Lista de Produtos</h2>
+    <ul id="listaProdutos"></ul>
+</body>
+</html>

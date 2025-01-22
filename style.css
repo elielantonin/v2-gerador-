@@ -1,0 +1,180 @@
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+VN:wght@100..400&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+VN:wght@100..400&display=swap');
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f8f8;
+    margin: 0;
+    padding: 0;
+}
+
+
+header {
+    background-color: #8B008B;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    font-family: "Playwrite VN", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* Ajuste do header para telas pequenas */
+@media (max-width: 768px) {
+    header {
+        padding: 15px;
+        font-size: 11px;
+    }
+}
+
+.catalogo {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+    font-family: Poppins, sans-serif;
+    gap: 15px; /* Espaçamento melhor entre produtos */
+}
+
+/* Responsividade para telas pequenas */
+@media (max-width: 600px) {
+    .catalogo {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+    }
+}
+
+.produto {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    width: 100%;
+    max-width: 350px; /* Mantém tamanho adequado em telas maiores */
+}
+
+/* Ajuste para telas muito pequenas */
+@media (max-width: 480px) {
+    .produto {
+        padding: 15px;
+        max-width: 90%;
+    }
+}
+
+.produto img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.produto h2 {
+    font-size: 18px;
+    color: #333;
+}
+
+.produto p {
+    font-size: 14px;
+    color: #666;
+}
+
+/* Ajuste de fonte para melhor leitura em telas pequenas */
+@media (max-width: 480px) {
+    .produto h2 {
+        font-size: 16px;
+    }
+    .produto p {
+        font-size: 13px;
+    }
+}
+
+.produto span {
+    display: block;
+    font-size: 16px;
+    font-weight: bold;
+    color: #8B008B;
+    margin: 10px 0;
+}
+
+/* Botão */
+.produto a {
+    display: block;
+    background: #25D366;
+    color: white;
+    padding: 12px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s ease;
+    width: 100%;
+    max-width: 200px;
+    margin: 0 auto; /* Centraliza o botão */
+}
+
+/* Ajuste para telas pequenas */
+@media (max-width: 480px) {
+    .produto a {
+        width: 100%;
+        padding: 14px;
+        font-size: 14px;
+    }
+    .header h1 {
+        font-size: 2px;
+    }
+}
+
+.produto a:hover {
+    background: #1da851;
+}
+
+/* Estilizando o botão do WhatsApp */
+.produto button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #25D366;
+    color: white;
+    padding: 12px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s ease;
+    width: 100%;
+    max-width: 220px;
+    margin: 15px auto; /* Centraliza o botão */
+    animation: pulse 1.5s infinite;
+}
+
+/* Ícone do WhatsApp dentro do botão */
+.produto button img {
+    width: 20px;
+    margin-right: 8px;
+}
+
+/* Efeito de pulsação */
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+
+.produto button:hover {
+    background: #1da851;
+}
+
+#search {
+    width: 80%;
+    max-width: 400px;
+    padding: 10px;
+    margin: 15px auto;
+    display: block;
+    border: 2px solid #8B008B;
+    border-radius: 5px;
+    font-size: 16px;
+}
